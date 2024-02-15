@@ -18,3 +18,13 @@ function hideOverlay() {
     document.getElementById('overlay').style.display = 'none';
     document.querySelector('.table-container').style.opacity = 0;
 }
+
+document.body.addEventListener('click', function() {
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('click-message').style.display = 'none'; // Hides the click message
+    document.getElementById('qr-code').style.display = 'none'; // Hides the QR code
+    setTimeout(() => {
+        document.querySelector('.table-container').style.opacity = 1;
+    }, 10); // Slight delay to ensure CSS transition takes effect
+});
+

@@ -78,15 +78,28 @@ body::before {
 
         #click-message {
             position: absolute;
-            top: 70%; /* Center vertically */
+            top: 60%; /* Adjust as needed to position vertically */
             left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust position to truly center */
+            transform: translate(-50%, -20%); /* Adjust to ensure proper centering, especially vertically */
             font-size: 24px; /* Adjust size as needed */
-            color: #FFBF00; /* Amber color */
+            color: #faa40f; /* Amber color */
             font-family: 'Inter', sans-serif;
             animation: fadeInOut 2s infinite; /* Apply the animation */
             z-index: 2; /* Ensure it's visible above the background */
             font-weight: bold;
+            text-align: center; /* Ensures text alignment */
+        }
+        
+        #qr-code {
+            position: absolute;
+            top: 75%; /* Position below the message */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust to center the QR code properly */
+            width: 150px; /* Set the width of the QR code */
+            height: 150px; /* Set the height of the QR code */
+            z-index: 2; /* Ensure it's visible above the background */
+            display: block; /* Ensures the QR code is treated as a block element for centering */
+            text-align: center; /* Center align the QR code if it's an image within a div */
         }
         
         @keyframes fadeInOut {
